@@ -20,5 +20,8 @@
   "homepage": "https://github.com/dubov94/vue-cli-launcher#readme",
   "peerDependencies": {
     "@vue/cli-service": "^4.0.0"
+  },
+  "dependencies": {
+    "minimist": "^1.2.5"
   }
 }
