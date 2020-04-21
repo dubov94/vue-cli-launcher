@@ -30,26 +30,26 @@ load("@npm//vue-cli-launcher:index.bzl", "vue_cli_launcher")
 
 vue_cli_launcher(
   name = "serve",
-  arguments = [
+  args = [
     "serve",
     "--package-json-path=$(rootpath package.json)",
   ],
   data = [
-    ...
     "package.json",
+    ...
   ],
 )
 
 vue_cli_launcher(
   name = "build",
-  arguments = [
+  args = [
     "build",
     "--dest=$(@D)",
     "--package-json-path=$(execpath package.json)",
   ],
   data = [
-    ...
     "package.json",
+    ...
   ],
   output_dir = True,
 )
