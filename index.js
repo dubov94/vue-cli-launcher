@@ -1,4 +1,4 @@
-import path from 'path'
+const path = require('path')
 
 const maybePopKwOption = (argv, optionName) => {
   const optionPrefix = `--${optionName}=`
@@ -12,15 +12,15 @@ const maybePopKwOption = (argv, optionName) => {
   return null
 }
 
-const main = () => {
+const main = (argv, env) => {
   let maybePackageJsonPath = maybePopKwOption(
-      process.argv, 'package-json-path')
+      argv, 'package-json-path')
   if (maybePackageJsonPath !== null) {
-    process.env['VUE_CLI_CONTEXT'] = path.resolve(
-        maybePackageJsonPath)
+    env['VUE_CLI_CONTEXT'] = path.dirname(
+        path.resolve(maybePackageJsonPath))
   }
 }
 
-main()
+main(process.argv, process.env)
 
-import '@vue/cli-service/bin/vue-cli-service.js'
+require('@vue/cli-service/bin/vue-cli-service.js')
