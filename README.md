@@ -25,7 +25,7 @@ As the original motivation for creating this package was to tackle issues outlin
 and [`vuejs/vue-cli#3152`](https://github.com/vuejs/vue-cli/issues/3152), here is an example
 of corresponding Bazel targets.
 
-```
+```bazel
 load("@npm//vue-cli-launcher:index.bzl", "vue_cli_launcher")
 
 vue_cli_launcher(
@@ -59,5 +59,5 @@ vue_cli_launcher(
 
 ```
 --package-json-path  Path to package.json of the project. Can be either absolute
-                     or relative the current directory.
+                     or relative to the current directory.
 ```
