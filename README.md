@@ -21,9 +21,9 @@ vue-cli-launcher serve --open --package-json-path=application/package.json
 ### Bazel
 
 As the original motivation for creating this package was to tackle issues outlined in
-[bazelbuild/rules_nodejs#1776](https://github.com/bazelbuild/rules_nodejs/issues/1776)
-and [vuejs/vue-cli#3152](https://github.com/vuejs/vue-cli/issues/3152), here is an example
-of a Bazel target.
+[`bazelbuild/rules_nodejs#1776`](https://github.com/bazelbuild/rules_nodejs/issues/1776)
+and [`vuejs/vue-cli#3152`](https://github.com/vuejs/vue-cli/issues/3152), here is an example
+of corresponding Bazel targets.
 
 ```
 load("@npm//vue-cli-launcher:index.bzl", "vue_cli_launcher")
