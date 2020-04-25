@@ -45,6 +45,7 @@ vue_cli_launcher(
   args = [
     "build",
     "--dest=$(@D)",
+    "--resolve-dest-by-cwd",
     "--package-json-path=$(execpath package.json)",
   ],
   data = [
@@ -58,6 +59,8 @@ vue_cli_launcher(
 ## Options
 
 ```
---package-json-path  Path to package.json of the project. Can be either absolute
-                     or relative to the current directory.
+--package-json-path    Path to package.json of the project. Can be either absolute
+                       or relative to the current directory.
+--resolve-dest-by-cwd  Base `--dest` resolution on the current directory rather than
+                       on the directory containing package.json of the project.
 ```
